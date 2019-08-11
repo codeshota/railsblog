@@ -1,4 +1,4 @@
-<%= form_with model: @article, local: true do |form| %>
+<%= simple_form_for @article do |f| %>
 
   <% if @article.errors.any? %>
     <div id="error_explanation">
@@ -14,18 +14,8 @@
     </div>
   <% end %>
 
-  <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </p>
-
-  <p>
-    <%= form.label :text %><br>
-    <%= form.text_area :text %>
-  </p>
-
-  <p>
-    <%= form.submit %>
-  </p>
+  <%= f.input :title %>
+  <%= f.input :text %>
+  <%= f.button :submit, class: "btn btn-primary" %>
 
 <% end %>
