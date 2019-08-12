@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Railsblog</title>
+    <title>RailsDev</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,6 +11,9 @@
 
   <body>
     <div class="container">
+
+      <%= render partial: "shared/nav" %>
+
       <%= yield %>
     </div>
   </body>
