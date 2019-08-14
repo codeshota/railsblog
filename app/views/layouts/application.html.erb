@@ -13,6 +13,11 @@
 
       <%= render partial: "shared/header" %>
 
+      <div class="container">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+      </div>
+
       <main role="main" class="flex-shrink-0">
         <%= yield %>
       </main>
