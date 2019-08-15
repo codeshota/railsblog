@@ -8,12 +8,11 @@
   <%= comment.body %>
 </p>
 
-<% if user_signed_in? %>
+<% if user_signed_in? && comment.user_id == current_user.id || current_user.admin %>
 <p>
   <%= link_to 'Delete', [comment.article, comment],
                method: :delete,
                data: { confirm: 'Are you sure?' } %>
 </p>
-<% else %>
-  <a href="/" data-confirm="Please, sign in for this action">Delete</a>
 <% end %>
+<hr>

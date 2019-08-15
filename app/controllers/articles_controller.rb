@@ -9,14 +9,14 @@ class ArticlesController < ApplicationController
   end
 
   def new
-    @article = current_user.article.build
+    @article = current_user.articles.build
   end
 
   def edit
   end
 
   def create
-    @article = current_user.article.build(article_params)
+    @article = current_user.articles.build(article_params)
   
     if @article.save
       redirect_to @article
