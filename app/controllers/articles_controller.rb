@@ -3,13 +3,16 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.order(created_at: :desc)
+    authorize @articles
   end
 
   def show
   end
 
   def new
-    @article = current_user.articles.build
+    # @article = current_user.articles.build
+    @article = Article.new
+    authorize @article
   end
 
   def edit
@@ -17,6 +20,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article = current_user.articles.build(article_params)
+    authorize @article
   
     if @article.save
       redirect_to @article
@@ -46,5 +50,6 @@ class ArticlesController < ApplicationController
 
     def find_article
       @article = Article.find(params[:id])
+      authorize @article
     end
 end
