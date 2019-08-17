@@ -2,7 +2,8 @@ class CommentsController < ApplicationController
   def create
     @article = Article.find(params[:article_id])
     @comment = @article.comments.create(comment_params)
-    @comment.user_id = current_user.id
+    @comment.user = current_user
+    authorize @comment
     @comment.save
     redirect_to article_path(@article)
   end
@@ -10,6 +11,7 @@ class CommentsController < ApplicationController
   def destroy
     @article = Article.find(params[:article_id])
     @comment = @article.comments.find(params[:id])
+    authorize @comment
     @comment.destroy
     redirect_to article_path(@article)
   end
