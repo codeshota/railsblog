@@ -17,6 +17,7 @@ gem 'jquery-rails'
 gem 'simple_form', '~> 4.1'
 gem 'devise', '~> 4.6', '>= 4.6.2'
 gem 'pundit', '~> 2.1'
+gem "nokogiri", ">= 1.10.4"
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
