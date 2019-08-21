@@ -10,6 +10,10 @@ class ArticlePolicy < ApplicationPolicy
   def create?
     user.present? && user.admin?
   end
+
+  def edit?
+    create?
+  end
  
   def update?
     create?
