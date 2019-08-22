@@ -1,5 +1,9 @@
 @import "bootstrap";
 
+.navbar {
+  background-color: #212529;
+}
+
 .notifications {
   padding-top: 56px;
 }
@@ -11,7 +15,7 @@
   transition: all .5s;
 
   &:hover {
-    color: #007bff;
+    color: #FF0000;
     text-decoration: none;
   }
 }
