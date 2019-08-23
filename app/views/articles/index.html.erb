@@ -1,8 +1,8 @@
 <div class="container">
 
   <% @articles.each do |article| %>
-    <%= link_to article.title, article_path(article), class: "post-title" %>
-    <p class="post-text"><%= truncate(article.text, length: 120) %></p>
+    <h4><%= link_to article.title, article_path(article) %></h4>
+    <p><%= truncate(article.text, length: 120) %></p>
     <hr>
 
     <% if user_signed_in? && current_user.admin == true %>
