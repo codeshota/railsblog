@@ -1,21 +1,19 @@
-<section>
-  <div class="container">
-    <h3>
-      <%= @article.title %>
-    </h3>
+<div class="container">
+  <h3>
+    <%= @article.title %>
+  </h3>
 
-    <p>
-      <%= @article.text %>
-    </p>
-    <hr>
+  <p>
+    <%= @article.text %>
+  </p>
+  <hr>
 
-    <% if @article.comments.present? %>
-      <%= render @article.comments %>
-      
-      <h4>Add a comment:</h4>
-    <% else %>
-      <p>No comments yet..</p>
-    <% end %>
-    <%= render 'comments/form' %>
-  </div>
-</section>
+  <% if @article.comments.present? %>
+    <%= render @article.comments %>
+    
+    <h4>Add a comment:</h4>
+  <% else %>
+    <p>No comments yet..</p>
+  <% end %>
+  <%= render 'comments/form' %>
+</div>

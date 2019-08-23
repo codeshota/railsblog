@@ -1,17 +1,14 @@
-<section>
-  <div class="container">
+<div class="container">
 
-    <% @articles.each do |article| %>
-      <%= link_to article.title, article_path(article), class: "post-title" %>
-      <p class="post-text"><%= truncate(article.text, length: 120) %></p>
-      <hr>
+  <% @articles.each do |article| %>
+    <%= link_to article.title, article_path(article), class: "post-title" %>
+    <p class="post-text"><%= truncate(article.text, length: 120) %></p>
+    <hr>
 
-      <% if user_signed_in? && current_user.admin == true %>
-        <%= link_to 'Edit', edit_article_path(article) %>
-        <%= link_to 'Delete', article_path(article), method: :delete, data: { confirm: 'Are you sure?' } %>
-      <% end %>
+    <% if user_signed_in? && current_user.admin == true %>
+      <%= link_to 'Edit', edit_article_path(article) %>
+      <%= link_to 'Delete', article_path(article), method: :delete, data: { confirm: 'Are you sure?' } %>
     <% end %>
+  <% end %>
 
-  </div>
-</section>
-
+</div>
