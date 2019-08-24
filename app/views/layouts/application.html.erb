@@ -13,6 +13,9 @@
   <body class ="d-flex flex-column h-100">
 
     <%= render partial: "shared/header" %>
+
+      <%= render "shared/jumbo" if current_page?(root_path) %>
+
       <div class="container">
 
         <% if notice %>
