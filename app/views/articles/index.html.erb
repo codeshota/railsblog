@@ -1,14 +1,18 @@
-<div class="container">
+<div class="container my-5">
 
   <% @articles.each do |article| %>
     <h4><%= link_to article.title, article_path(article) %></h4>
-    <p><%= truncate(article.text, length: 120) %></p>
-    <hr>
+    <p><%= truncate(article.text, length: 300) %></p>
 
     <% if user_signed_in? && current_user.admin == true %>
-      <%= link_to 'Edit', edit_article_path(article) %>
-      <%= link_to 'Delete', article_path(article), method: :delete, data: { confirm: 'Are you sure?' } %>
+      <div class="btn-group" role="group">
+        <%= link_to 'Edit', edit_article_path(article), class: "btn btn-outline-primary btn-sm" %>
+        <%= link_to 'Delete', article_path(article), method: :delete, 
+                              data: { confirm: 'Are you sure?' }, 
+                              class: "btn btn-outline-danger btn-sm" %>
+      </div>
+      <hr>
     <% end %>
   <% end %>
-
+  
 </div>

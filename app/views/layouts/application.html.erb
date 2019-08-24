@@ -17,13 +17,11 @@
       <%= render "shared/jumbo" if current_page?(root_path) %>
 
       <div class="container">
-
         <% if notice %>
           <p class="notice my-1"><%= notice %></p>
         <% elsif alert %>
           <p class="alert my-1"><%= alert %></p>
         <% end %>
-
       </div>
 
       <%= yield %>
