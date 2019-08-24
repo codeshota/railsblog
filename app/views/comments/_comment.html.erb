@@ -14,6 +14,8 @@
 </p>
 
 <p>
-  <%= link_to 'Delete', [comment.article, comment], method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %>
+  <%= link_to 'Delete', [comment.article, comment], 
+                        method: :delete, data: { confirm: 'Are you sure?' }, 
+                        class: "btn btn-danger" %>
 </p>
-<hr>
+<hr class="my-5">

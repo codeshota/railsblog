@@ -1,12 +1,8 @@
 <div class="container my-5">
-  <h4>
-    <%= @article.title %>
-  </h4>
+  <h2><%= @article.title %></h2>
 
-  <p>
-    <%= @article.text %>
-  </p>
-  <hr>
+  <p class="lead"> <%= @article.text %></p>
+  <hr class="my-5">
 
   <% if @article.comments.present? %>
     <%= render @article.comments %>
