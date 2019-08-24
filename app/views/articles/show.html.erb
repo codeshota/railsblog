@@ -1,8 +1,10 @@
 <div class="container my-5">
-  <h2><%= @article.title %></h2>
+  <div class="shadow p-5 mb-5">
 
-  <p class="lead"> <%= @article.text %></p>
-  <hr class="my-5">
+    <h2><%= @article.title %></h2>
+
+    <p class="lead"> <%= @article.text %></p>
+  </div>
 
   <% if @article.comments.present? %>
     <%= render @article.comments %>
