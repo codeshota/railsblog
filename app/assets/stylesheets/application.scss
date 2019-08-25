@@ -1,17 +1,30 @@
 @import "bootstrap";
 
 .navbar {
-  background-color: #212529;
+  background-color: #1c1c1c;
 }
 
 body {
   padding-top: 56px;
+  color: #1c1c1c;
 }
 
 .jumbotron {
   padding: 200px 0;
+  background: url('bg.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
 }
 
 .alert {
   padding: 0;
+}
+
+A {
+  color: #dc3545;
+
+  &:hover {
+    color: #c82333;
+    text-decoration: none;
+  }
 }

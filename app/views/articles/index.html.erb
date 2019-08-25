@@ -7,12 +7,9 @@
       <p class="lead"><%= truncate(article.text, length: 300) %></p>
 
       <% if user_signed_in? && current_user.admin == true %>
-        <div class="btn-group" role="group">
-          <%= link_to 'Edit', edit_article_path(article), class: "btn btn-primary" %>
+          <%= link_to 'Edit', edit_article_path(article) %> |
           <%= link_to 'Delete', article_path(article), method: :delete, 
-                                data: { confirm: 'Are you sure?' }, 
-                                class: "btn btn-danger" %>
-        </div>
+                                data: { confirm: 'Are you sure?' } %>
       <% end %>
     </div>
     <%# <br> %>
