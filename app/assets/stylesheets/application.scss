@@ -2,6 +2,10 @@
 
 .navbar {
   background-color: #1c1c1c;
+
+  .navbar-brand {
+    font-weight: bold;
+  }
 }
 
 body {
@@ -27,4 +31,8 @@ A {
     color: #c82333;
     text-decoration: none;
   }
+}
+
+h2 {
+  font-weight: bold;
 }
