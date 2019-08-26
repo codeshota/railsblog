@@ -1,27 +1,8 @@
 @import "bootstrap";
 
-.navbar {
-  background-color: #1c1c1c;
-
-  .navbar-brand {
-    font-weight: bold;
-  }
-}
-
 body {
   padding-top: 56px;
   color: #1c1c1c;
-}
-
-.jumbotron {
-  padding: 200px 0;
-  background: url('bg.jpg') no-repeat center center;
-  background-size: cover;
-  color: white;
-}
-
-.alert {
-  padding: 0;
 }
 
 A {
@@ -33,6 +14,26 @@ A {
   }
 }
 
-h2 {
+h1, h2, h3 {
   font-weight: bold;
+}
+
+.navbar {
+  background-color: #1c1c1c;
+
+  .navbar-brand {
+    font-weight: bold;
+  }
+}
+
+.jumbotron {
+  padding: 200px 0;
+  background: url('bg.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+  margin-bottom: 0;
+}
+
+.alert {
+  padding: 0;
 }
