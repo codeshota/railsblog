@@ -5,13 +5,8 @@ body {
   color: #1c1c1c;
 }
 
-A {
-  color: #dc3545;
-
-  &:hover {
-    color: #c82333;
-    text-decoration: none;
-  }
+A:hover {
+  text-decoration: none;
 }
 
 h1, h2, h3 {
