@@ -3,11 +3,12 @@
 </p>
 
 <p class="text-muted">
-  <%= comment.user.email %>
+  Date: <%= comment.user.created_at.to_date %> <br>
+  Email: <%= comment.user.email %> 
 </p>
 
 <p>
   <%= link_to 'Delete', [comment.article, comment], 
-                        method: :delete, data: { confirm: 'Are you sure?' } %>
+                        method: :delete, class: "btn btn-primary" %>
 </p>
 <hr class="my-5">
