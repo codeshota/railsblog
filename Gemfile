@@ -15,7 +15,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 gem 'jquery-rails'
 gem 'simple_form', '~> 4.1'
-gem 'devise', '~> 4.6', '>= 4.6.2'
+gem 'devise', '~> 4.7'
 gem 'pundit', '~> 2.1'
 gem "nokogiri", ">= 1.10.4"
 
